@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet"/>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+      
+    <title>calculette</title>
+  </head>
+  <body>
+    <header><img src="logo_microlead.png"/></header>
+
+    <div class="conteneur">
+      <div class="calculette">
+        <h1>Calculatrice prêt immobilier</h1>
+        <form class="formulaire">
+          <div class="form"> 
+
+            <div class="montant1">
+              <label id="euros" for="montant" class="nunito-bold">montant emprunté</label> 
+              <input type="text" id="montant"/>
+              <span class="unité">€</span>
+            </div>
+
+            <div class="montant2">
+              <label id="pourcent" for="taux"class="nunito-bold">taux nominal</label> 
+              <input type="text"id="taux"/>
+              <span class="unité">%</span>
+            </div>
+
+            <div class="montant3">
+              <label id="mensuel" for="durée"class="nunito-bold">durée de remboursement</label>  <!---&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+              <input type="text"id="durée"/>
+              <span class="unité">an(s)</span>
+            </div>
+            <span id="error"></span>
+
+            <button class="calcul"type="button" name="Calculer" value="Calculer">calculer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+    <div class="conteneur2">
+      <div id="montableau" class="tableaux">
+        <h1>Tableau d'amortissement</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Mois</th>
+              <th>Solde initial</th>
+              <th>Échéance</th>
+              <th>Intérêts</th>
+              <th>Amortissement</th>
+              <th>Solde restant</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Les lignes du tableau seront ajoutées ici par JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <button class="PDF"type="button" name="PDF" value="Calculer">télécharger</button>
+
+
+
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
